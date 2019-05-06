@@ -68,19 +68,20 @@ export default {
     };
   },
   methods: {
-    submitHandler(e) {
-      e.preventDefault();
-      this.$http
-        .get("/api/login", { params: this.model })
-        .then(res => {
-          console.log(res.data.code);
-          console.log(res.data.token);
-        })
-        .catch(err => {
-          console.log(err);
-        });
+     async submitHandler(e){
+            e.preventDefault()
+            try{
+                const result=await this.$http.get('/api/login',{params:this.model})
+                if(result.data.code=='0'){
+                    alert(result.data.message)
+                }else{
+                     alert(result.data.message)
+                }
+            }catch(err){
+                console.log(err)
+            }
+        }
     }
-  }
 };
 </script>
 

@@ -49,8 +49,7 @@ module.exports = {
           } else {
             res.json({
               code: 1,
-              message: '账号或密码错误',
-              token:null
+              message: '账号或密码错误'
             })
           }
         })
