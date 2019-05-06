@@ -33,6 +33,27 @@ module.exports = {
             })
           }
         })
+        //登录接口
+        let tokenkey = 'mytokenkey'
+        app.get('/api/login', (req, res) => {
+          const {
+            username,
+            password
+          } = req.query
+          if (username == 'hello' && password == '123456' || username == 'Tom' && password == '123456') {
+            res.json({
+              code: 0,
+              message: '登录成功',
+              token: tokenkey + '-' + username + '-' + (new Date().getTime() + 60 * 60 * 1000)
+            })
+          } else {
+            res.json({
+              code: 1,
+              message: '账号或密码错误',
+              token:null
+            })
+          }
+        })
       }
     }
   },

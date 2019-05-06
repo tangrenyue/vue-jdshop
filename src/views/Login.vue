@@ -61,7 +61,7 @@ export default {
           },
           {
             type: "submit",
-            label: "注册"
+            label: "登录"
           }
         ]
       }
@@ -71,9 +71,10 @@ export default {
     submitHandler(e) {
       e.preventDefault();
       this.$http
-        .get("/api/register", { params: this.model })
+        .get("/api/login", { params: this.model })
         .then(res => {
-          console.log(res.data.success);
+          console.log(res.data.code);
+          console.log(res.data.token);
         })
         .catch(err => {
           console.log(err);
