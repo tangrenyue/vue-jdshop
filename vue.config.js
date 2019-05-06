@@ -53,6 +53,25 @@ module.exports = {
             })
           }
         })
+
+        //首页轮播图数据接口
+        app.get('/api/banner', (req, res) => {
+          res.json({
+            data: [{
+                url: 'https://m.xdclass.net',
+                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/bannner/1901/learn.png'
+              },
+              {
+                url: 'https://m.xdclass.net',
+                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/upload/banner/devpay.png'
+              },
+              {
+                url: 'https://m.xdclass.net',
+                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/bannner/1901/bat.png'
+              }
+            ]
+          })
+        })
       }
     }
   },
