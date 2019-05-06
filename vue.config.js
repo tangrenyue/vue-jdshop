@@ -6,11 +6,11 @@ module.exports = {
       before(app) {
         //用户信息池
         let userpoor = [{
-            username: 'xiaod',
+            username: 'hello',
             password: '123456'
           },
           {
-            username: 'tim',
+            username: 'Tom',
             password: '123456'
           }
         ]
