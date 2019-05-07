@@ -52,14 +52,20 @@ export default new Router({
         {
           path: 'cart',
           name: 'cart',
+          meta: {
+            requireAuth: true, //这个路由页面是要有登录权限的
+          },
           component: () => import('./views/Cart.vue')
         },
         {
           path: 'mine',
           name: 'mine',
+          meta: {
+            requireAuth: true, //登录权限
+          },
           component: () => import('./views/Mine.vue')
         },
       ]
     },
   ]
-}) 
+})
