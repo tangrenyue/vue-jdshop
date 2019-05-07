@@ -9,7 +9,7 @@
       </div>
     </div>
     <cube-button style="margin:10px 0;">下单</cube-button>
-    <cube-button>清空购物车</cube-button>
+    <cube-button @click="clearcart">清空购物车</cube-button>
   </div>
 </template>
 
@@ -26,12 +26,20 @@ export default {
       cartarr: state => state.cartarry
     })
   },
-  methods: {
-    //减少商品
-    removeCart(index) {},
-    //增加商品
-    addCart(index) {}
-  }
+   methods:{
+        //减少商品
+        removeCart(index){
+            this.$store.commit('cartremove',index)
+        },
+        //增加商品
+        addCart(index){
+            this.$store.commit('cartadd',index)
+        },
+        //清空购物车
+        clearcart(){
+            this.$store.commit('clearcart')
+        }
+    }
 };
 </script>
 
