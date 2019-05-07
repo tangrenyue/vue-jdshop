@@ -3,7 +3,6 @@
     <transition :name="transitionName">
       <router-view class="Router"></router-view>
     </transition>
-
     <cube-tab-bar
       v-model="selectedLabelDefault"
       :data="tabs"
@@ -11,10 +10,12 @@
       @change="changeHandler"
       class="botnav"
     ></cube-tab-bar>
+    <span class="countsum">{{countsum}}</span>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -70,6 +71,11 @@ export default {
           break;
       }
     }
+  },
+  computed: {
+    ...mapGetters({
+      countsum: "countsum"
+    })
   },
   created() {
     switch (this.$route.path) {
@@ -129,6 +135,21 @@ export default {
   -webkit-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
 }
+
+.countsum {
+  position: fixed;
+  bottom: 33px;
+  right: 23%;
+  z-index: 1001;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  font-size: 14px;
+  background: red;
+  color: #fff;
+}
 </style>
+
 
 
