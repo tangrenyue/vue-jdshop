@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .cube-tab-bar.botnav {
   position: fixed;
   bottom: 0;
@@ -91,20 +91,25 @@ export default {
   i {
     font-size: 20px;
   }
-
 }
-    .Router
-        position absolute
-        width  100%
-        transition all 0.8s ease
-    .silde-left-enter,.slide-right-leave-active
-        opacity 0
-        -webkit-transform  translate(100%,0)
-        transform  translate(100%,0)
-    .slide-left-leave-active,.slide-right-enter
-        opacity 0
-        -webkit-transform  translate(-100%,0)
-        transform  translate(-100%,0)
+
+.Router {
+  position: absolute;
+  width: 100%;
+  transition: all 0.8s ease;
+}
+
+.silde-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
 </style>
 
 
