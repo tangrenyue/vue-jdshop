@@ -5,7 +5,7 @@ import Login from './views/Login.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [{
       path: '/',
@@ -43,11 +43,6 @@ export default new Router({
           path: 'list',
           name: 'list',
           component: () => import('./views/List.vue')
-        },
-        {
-          path: 'search',
-          name: 'search',
-          component: () => import('./views/Search.vue')
         },
         {
           path: 'cart',

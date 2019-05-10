@@ -1,4 +1,8 @@
 module.exports = {
+  // 基本路径
+ baseUrl: './',
+ // 输出文件目录
+ outputDir: 'dist',
   configureWebpack: {
     devServer: {
       //MOCK接口编写的地方
@@ -58,16 +62,13 @@ module.exports = {
         app.get('/api/banner', (req, res) => {
           res.json({
             data: [{
-                url: 'https://m.xdclass.net',
-                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/bannner/1901/learn.png'
+                image: 'http://images.baixingliangfan.cn/advertesPicture/20180407/20180407175040_1780.jpg'
               },
               {
-                url: 'https://m.xdclass.net',
-                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/upload/banner/devpay.png'
+                image: 'http://images.baixingliangfan.cn/advertesPicture/20180407/20180407175111_9509.jpg'
               },
               {
-                url: 'https://m.xdclass.net',
-                image: 'https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/bannner/1901/bat.png'
+                image: 'http://images.baixingliangfan.cn/advertesPicture/20180407/20180407175142_6947.jpg'
               }
             ]
           })

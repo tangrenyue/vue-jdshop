@@ -31,10 +31,6 @@ export default {
           icon: "cubeic-tag"
         },
         {
-          label: "搜索",
-          icon: "cubeic-search"
-        },
-        {
           label: "购物车",
           icon: "cubeic-mall"
         },
@@ -60,9 +56,6 @@ export default {
         case "分类":
           this.$router.push({ path: "/botnav/list" });
           break;
-        case "搜索":
-          this.$router.push({ path: "/botnav/search" });
-          break;
         case "购物车":
           this.$router.push({ path: "/botnav/cart" });
           break;
@@ -84,9 +77,6 @@ export default {
         break;
       case "/botnav/list":
         this.selectedLabelDefault = "分类";
-        break;
-      case "/botnav/search":
-        this.selectedLabelDefault = "搜索";
         break;
       case "/botnav/cart":
         this.selectedLabelDefault = "购物车";
@@ -139,7 +129,7 @@ export default {
 .countsum {
   position: fixed;
   bottom: 33px;
-  right: 23%;
+  right: 30%;
   z-index: 1001;
   width: 18px;
   height: 18px;
